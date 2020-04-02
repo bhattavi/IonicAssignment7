@@ -4,6 +4,7 @@ import { NavParams, ModalController } from '@ionic/angular';
 @Component({
     selector: 'modal-page',
     templateUrl: 'modal-page.html',
+    
 })
 
 export class ModalPage implements OnInit {

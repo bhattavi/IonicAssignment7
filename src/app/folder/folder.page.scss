@@ -27,10 +27,101 @@ ion-menu-button {
     text-decoration: none;
 }
 
-ion-content ion-toolbar {
-    --background: transparent;
+ion-toolbar {
+    --background: linear-gradient(90deg, rgba(11, 7, 74, 1) 0%, rgba(18, 18, 140, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
 }
 
-.icon {
-    color: red($color: #000000) !important;
+ion-button {
+    --background: linear-gradient(90deg, rgba(11, 7, 74, 1) 0%, rgba(18, 18, 140, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+.ion-button {
+    --transition: 3s width;
+}
+
+.transition {
+    padding: 10px;
+    transition: 10s;
+    width: 250px;
+    animation: slideInSmooth ease-in 10;
+}
+
+.transition :hover {
+    width: 250px;
+    transition: 10s;
+}
+
+ion-content.background {
+    // --ion-background-color: red;
+    --background: url('https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+}
+
+ion-item {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+ion-list {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+.animation {
+    position: relative;
+    animation-name: icons;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+@keyframes icons {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    10% {
+        left: 180px;
+        top: 0px;
+    }
+    20% {
+        left: 0px;
+        top: 0px;
+    }
+    30% {
+        left: 180px;
+        top: 0px;
+    }
+    40% {
+        left: 0px;
+        top: 0px;
+    }
+    50% {
+        left: 0px;
+        top: 0px;
+    }
+    60% {
+        left: 180px;
+        top: 0px;
+    }
+    70% {
+        left: 0px;
+        top: 0px;
+    }
+    80% {
+        left: 180px;
+        top: 0px;
+    }
+    90% {
+        left: 0px;
+        top: 0px;
+    }
+    95% {
+        left: 180px;
+        top: 0px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
 }

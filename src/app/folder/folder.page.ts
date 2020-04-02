@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, ActionSheetController, LoadingController } from '@ionic/angular';
 import { ModalPage } from '../modal/modal.page';
@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+  
+  
   public folder: string;
 
   name: string;
@@ -69,5 +71,7 @@ export class FolderPage implements OnInit {
 
     (await actionSheet).present();
   }
+
+  
 
 }

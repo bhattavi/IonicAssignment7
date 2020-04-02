@@ -7,7 +7,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="background" [fullscreen]="true">
     <ion-header collapse="condense">
         <ion-toolbar>
             <ion-title size="large">{{ folder }}</ion-title>
@@ -18,19 +18,26 @@
         <ion-label position="floating">Name</ion-label>
         <ion-input [(ngModel)]="name" id="name"></ion-input>
     </ion-item>
-    <ion-button (click)="onModal()">Click Me</ion-button>
+    <div class="transition">
+        <ion-button (click)="onModal()">Click Me</ion-button>
+    </div>
+
     <ion-item>
-        <ion-icon name="logo-facebook"></ion-icon>
-        <ion-icon name="logo-amazon"></ion-icon>
-        <ion-icon name="logo-apple"></ion-icon>
-        <ion-icon name="logo-google"></ion-icon>
+
+        <ion-icon class="animation" name="logo-facebook"></ion-icon>
+        <ion-icon class="animation" name="logo-amazon"></ion-icon>
+        <ion-icon class="animation" name="logo-apple"></ion-icon>
+        <ion-icon class="animation" name="logo-google"></ion-icon>
+
 
     </ion-item>
-    <ion-card (click)="actionSheet()">
-        <img src="https://comicvine1.cbsistatic.com/uploads/original/11137/111372607/6749946-46108866_2138130396245355_1197692474502530083_n.jpg" />
+    <div>
+        <ion-card (click)="actionSheet()">
+            <img src="https://www.godisageek.com/wp-content/uploads/Dragon-Ball-Z-Kakarot.jpg" />
 
 
-    </ion-card>
+        </ion-card>
+    </div>
 
     <ion-list>
         <ion-item>
@@ -75,6 +82,7 @@
             </ion-fab-button>
         </ion-fab-list>
     </ion-fab>
+
 
 
 
