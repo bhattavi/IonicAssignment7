@@ -1,21 +1,81 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ folder }}</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">{{ folder }}</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input [(ngModel)]="name" id="name"></ion-input>
+    </ion-item>
+    <ion-button (click)="onModal()">Click Me</ion-button>
+    <ion-item>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-amazon"></ion-icon>
+        <ion-icon name="logo-apple"></ion-icon>
+        <ion-icon name="logo-google"></ion-icon>
+
+    </ion-item>
+    <ion-card (click)="actionSheet()">
+        <img src="https://comicvine1.cbsistatic.com/uploads/original/11137/111372607/6749946-46108866_2138130396245355_1197692474502530083_n.jpg" />
+
+
+    </ion-card>
+
+    <ion-list>
+        <ion-item>
+            <h4>Remainder</h4>
+        </ion-item>
+
+        <ion-item>
+            <ion-input placeholder="Title"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="Location"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Start Date</ion-label>
+            <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Start Time</ion-label>
+            <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Ends</ion-label>
+            <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="light">
+            <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="start">
+            <ion-fab-button color="light">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+                <ion-icon name="logo-vimeo"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+
+
+
 </ion-content>
