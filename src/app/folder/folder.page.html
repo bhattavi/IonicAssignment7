@@ -21,6 +21,11 @@
     <div class="transition">
         <ion-button (click)="onModal()">Click Me</ion-button>
     </div>
+    <div>
+        <ion-button (click)="presentToast()" expand="block">Wifi
+            <ion-icon slot="end" name="wifi-outline"></ion-icon>
+        </ion-button>
+    </div>
 
     <ion-item>
 
@@ -39,7 +44,7 @@
         </ion-card>
     </div>
     <ion-item>
-        <h4>Remainder</h4>
+        <h4 class="animation">Remainder</h4>
     </ion-item>
 
 
@@ -52,15 +57,15 @@
     </ion-item>
 
     <ion-item>
-        <ion-label>Start Date</ion-label>
+        <ion-label class="animation">Start Date</ion-label>
         <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
     </ion-item>
     <ion-item>
-        <ion-label>Start Time</ion-label>
+        <ion-label class="animation">Start Time</ion-label>
         <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
     </ion-item>
     <ion-item>
-        <ion-label>Ends</ion-label>
+        <ion-label class="animation">Ends</ion-label>
         <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
     </ion-item>
 
